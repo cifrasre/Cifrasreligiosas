@@ -1,0 +1,70 @@
+@charset "utf-8";
+/* CSS Dócument */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+	.navbar{
+			padding: 15px 30px;
+			margin: 0;
+			box-sizing: border-box;
+			font-family: 'Poppins', sans-serif;
+			display: flex;
+			width: 100%;
+			background-color: #151d22;
+			position: fixed;
+			justify-content: space-between;
+			text-align: center;
+			z-index: 3;}
+
+nav .icone2{	
+    font-size: 37px;
+    font-weight: 800;
+    color: #fff;
+    cursor: pointer}
+
+
+	nav .icone{	
+			font-size: 33px;
+			font-weight: 800;
+			color: #b4d0da;
+			cursor: pointer}
+
+	nav ol{	
+			display: flex;
+			list-style: none;
+			margin: auto 0}
+
+	nav ol li{	
+			margin: 0 2px}
+	nav ol li a{	
+			color: #fff;
+			font-size: 20px;
+			text-decoration: none;
+			text-transform: capitalize;
+			letter-spacing: 1px;
+			padding: 5px 10px}
+
+	nav ol li:hover a{ 
+			background-color: #fff;
+			color: #151d22;
+			text-decoration: none;}	
+		
+	input[type="checkbox"]{
+			-webkit-appearance: none;
+			display: none}
+
+
+            @media screen and (max-width: 1250px) {
+                .navbar{	
+                        display: block;
+                        padding: 0;
+                        position: relative;
+                        }
+            nav.navbar{height: 180px;}
+
+                nav .icone{	
+                        display: inline-block;
+                        padding: 15px 30px}}
+
+@media screen and (max-width: 650px) {
+    nav.navbar{ height: 230px; }
+}
+@media screen and (max-width: 350px){	.navbar{width: 130%}}

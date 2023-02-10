@@ -1,0 +1,11 @@
+@charset "utf-8";
+/* CSS Dócument */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+.musicas{   width: 750px}
+.banner-container{  margin-top: 700px}
+#abecedario{    margin-top: 1000px;}
+.footer{    margin-top: 1200px;}
+
+@media screen and (max-width: 850px){.musicas{  width: 600px}}
+@media screen and (max-width: 620px){.musicas h4{    margin-left: -20%;} .musicas{  width: 400px}}

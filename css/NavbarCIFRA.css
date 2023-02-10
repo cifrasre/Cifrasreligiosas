@@ -1,0 +1,67 @@
+﻿@charset "utf-8";
+/* CSS Dócument */
+.logo{		position: absolute;
+			width: 50px;
+			top: 0px;
+			left: 20px;
+			}
+.logo1{		position: absolute;
+			width: 50px;
+			top: 0px;
+			left: 230px;}
+
+.logo2{		position: absolute;
+			width: 50px;
+			top: 20px;
+			left: 1120px;
+			}
+.logo3{		position: absolute;
+			width: 50px;
+			top: 20px;
+			left: 1330px;}
+
+	.navbar-expand-lg{	width: 1420px;
+						
+						}
+
+.textologo{				position: fixed;
+						top: 0px;
+						left: 0;
+						width: 1200px}
+.cifra{		position: absolute;
+			top: 15px;
+			left: 75px;
+			color: #E7E7E7}
+.cifra1{		position: absolute;
+			top: 35px;
+			left: 1175px;
+			color: #E7E7E7}
+	.navbar-brand2{		position: absolute;
+			  			top: 125px;
+		  				left: 30px;
+		  				color: #404040;
+		  				font-size: 20px;
+						}
+#meio{			position: absolute;
+				top: 0px;
+				text-align: center}
+	#face{		position: absolute; top: 125px; left: 1120px}
+	#insta{		position: absolute; top: 125px; left: 1225px}
+	#tt{		position: absolute; top: 125px; left: 1330px}
+
+	.navbar-nav {	margin-left: 520px}
+
+	#pesquisa3{	position: absolute;
+				top: 0px;
+				left: 520px}
+	#pesquisa2{	width: 300px;
+				top: 0px;
+				position: absolute;
+				left: 215px}
+	#pesquisa{	position: absolute;
+			  	left: 800px;
+				top: 10px}
+.fundo{			position: absolute;
+				top: 80px}
+
+

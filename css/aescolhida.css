@@ -1,0 +1,85 @@
+﻿@charset "utf-8";
+/* CSS Dócument */
+.tom{		position: absolute;
+					top: 300px;
+					left: 300px;
+					font-family:'Poppins', sans-serif;
+					}
+		.acordes{	color: #211774;
+					font-family: 'Poppins', sans-serif}
+		#tom1{		position: absolute;
+					top: 300px;
+					left: 340px}
+		#c1{	position: relative;
+					top: 370px;
+					left: 315px}
+		#b1{	position: relative;
+				top: 355px;
+				left: 315px}
+		#c2{	position: relative;
+				top: 345px;
+				left: 315px}
+		#b2{	position: relative;
+				top: 330px;
+				left: 315px}
+		#c3{	position: relative;
+				top: 320px;
+				left: 315px}
+		#b3{	position: relative;
+				top: 305px;
+				left: 315px}
+		#c4{	position: relative;
+				top: 295px;
+				left: 315px}
+		#b4{	position: relative;
+				top: 280px;
+				left: 315px}
+		#c5{	position: relative;
+				top: 270px;
+				left: 315px}
+		#b5{	position: relative;
+				top: 255px;
+				left: 315px}
+		#c6{	position: relative;
+				top: 245px;
+				left: 315px}
+		#b6{	position: relative;
+				top: 230px;
+				left: 315px}
+		#c7{	position: relative;
+					top: 220px;
+					left: 315px}
+		#b7{	position: relative;
+				top: 205px;
+				left: 315px}
+		#c8{	position: relative;
+				top: 195px;
+				left: 315px}
+		#b8{	position: relative;
+				top: 180px;
+				left: 315px}
+		#c9{	position: relative;
+				top: 170px;
+				left: 315px}
+		#b9{	position: relative;
+				top: 155px;
+				left: 315px}
+		#c10{	position: relative;
+				top: 145px;
+				left: 315px}
+		#b10{	position: relative;
+				top: 130px;
+				left: 315px}
+		#c11{	position: relative;
+				top: 120px;
+				left: 315px}
+		#b11{	position: relative;
+				top: 105px;
+				left: 315px}
+		#c12{	position: relative;
+				top: 95px;
+				left: 315px}
+		#b12{	position: relative;
+				top: 80px;
+				left: 315px}
+.footer{	top: 1200px}
