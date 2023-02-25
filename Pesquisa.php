@@ -8,7 +8,9 @@ $nome = $_POST['nome'];
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="viewport" content="width=device-width, user-scalable=no">
+	<meta name="viewport" content="width=device-width, user-scalable=no">
+	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3144818185892539"
+     crossorigin="anonymous"></script>
 <title>Buscas - Cifras Religiosas - suas cifras estão aqui!</title>
 	<link rel="stylesheet" type="text/css" href="css/bootstrap-4.3.1.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
