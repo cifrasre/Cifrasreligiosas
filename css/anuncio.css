@@ -3,15 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300&display=swap');
 .anunncio{
 	position: absolute;
-	width: 728px;
-	height: 90px;
-	background: rgb(116,213,153);
-	background: linear-gradient(0deg, rgba(116,213,153,1) 0%, rgba(255,214,127,1) 100%);
 	margin-top: 650px;
-	font-size: 40px;
-	text-align: center;
-	color: #1f1f1f;
-	font-family: 'Poppins', sans-serif;
 	margin-left: 24%;}
 
 .anunncio p{	display: block;
