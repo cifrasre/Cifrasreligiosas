@@ -14,7 +14,7 @@ var html = `
                 <li nome="kyrie eleison jmj rio 2013 perdao ato penitencial"><a href="kyrieeleison/Kyrie-Eleison.html"><img src="img/logo.png" alt="Artista"><h3>Kyrie Eleison - JMJ Rio 2013</h3></a></li>
                 <li nome="quem e essa que avanca como aurora padre marcelo rossi"><a href="quemeessaqueavanca/Quem-e-essa.html"><img src="img/logo.png" alt="Artista"><h3>Quem é Essa que Avan... - P. Marcelo Rossi</h3></a></li>
                 <li nome="fica sempre um pouco de perfume alberto costa"><a href="ficasempre/Fica-Sempre.html"><img src="img/Logo.png" alt="Artista"><h3>Fica Sempre... - Alberto Costa</h3></a></li>
-                <li nome="hoje e tempo de louvar a deus vem louvar padre joanas abib"><a href="vemlouvar/Vem-louvar.html"><img src="img/artista/Padre jonas.png" alt="Artista"><h3>Hoje é Tempo de Louvar... - Padre Jonas</h3></a></li>
+                <li nome="hoje e tempo de louvar a deus vem louvar padre joanas abib"><a href="vemlouvar/Vem-louvar.html"><img src="img/artista/logo.png" alt="Artista"><h3>Hoje é Tempo de Louvar... - Padre Jonas</h3></a></li>
                 <li nome="gloria a deus nas alturas eliana ribeiro"><a href="gloriaadeusnasalturas/Gloria-a-Deus-nas-alturas.html"><img src="img/logo.png" alt="Artista"><h3>Glória a Deus nas Alturas - Eliana Ribeiro</h3></a></li>
                 <li nome="a mesa santa coro edipaul"><a href="amesasanta/A-Mesa-Santa.html"><img src="img/logo.png" alt="Artista"><h3>A Mesa Santa - Coro Edipaul</h3></a></li>
                 <li nome="como es lindo vida reluz"><a href="comoeslindo/Como-es-Lindo.html"><img src="img/artista/Vida reluz.png" alt="Artista"><h3>Como és Lindo - Vida Reluz</h3></a></li>

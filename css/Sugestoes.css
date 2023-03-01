@@ -16,7 +16,7 @@ transition: 3s;}
 .lista img{  width: 40px; margin-left: 5px; margin-top: 12px;}
 
 @media screen and (max-width: 1250px) {
-    .lista h3{ font-size: 25px}
+    .lista h3{ font-size: 20px}
 }
 @media screen and (max-width: 620px) {
     .lista h3{  font-size: 15.5px}

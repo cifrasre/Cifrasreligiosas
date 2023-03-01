@@ -137,11 +137,11 @@
 			margin-bottom: 15px}
 
 	nav .busca input{
-			width: 280%;
-			margin-left: -100%}
+			width: 240%;
+			margin-left: -80%}
 
 			nav .busca button{
-				margin-left: 180%;
+				margin-left: 160%;
 				margin-top: -11%}
 
 	nav ol{	
@@ -197,28 +197,30 @@
 
 
 	.lista{	position: absolute;
-				width: 930px;
+				width: 795px;
 				margin-top: 67px;
-				margin-left: -26%}	
+				margin-left: -260px}	
 	}
 
 	@media (max-width: 820px) {
 
 		nav .busca input{
-			width: 200%;
-			margin-left: -50%}
+			width: 170%;
+			margin-left: -35%}
 
 			nav .busca button{
-				margin-left: 150%;
+				margin-left: 135%;
 				margin-top: -11%}
 		
 				#html{	margin-left: -25%; width: 15%}
+
+	.lista{	margin-left: -32px; width:575px}
 	}
 
 
 	@media screen and (max-width: 620px){
 		#html{	margin-left: 112px; }
-        .lista{width: 335px; margin-top:12.5%}
+        .lista{width: 334px; margin-left: -125px; margin-top: 59px}
 		nav .barras{	right: 20px}
 	
 		nav .busca input{
@@ -228,6 +230,8 @@
 			nav .busca button{
 				margin-left: 90%;
 				margin-top: -11.5%;
-				}
-	
+				}}
+
+	@media screen and (max-width: 420px){
+		nav .icone{	font-size: 27px;}
 	}
