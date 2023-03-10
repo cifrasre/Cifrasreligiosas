@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Cifras Religiosas - Suas Cifras estão Aqui</title>
+	<link href="css/bootstrap-4.3.1.css" rel="stylesheet">
+	<link href="css/Navbar.css" rel="stylesheet">
+	<link href="css/responsivo.css" rel="stylesheet">
+</head>
+<body>
+	<div class="corpo">
+		<input type="checkbox" id="check">
+
+<nav class="navbar">
+    <div class="icone" onclick="fecharmodal();">Cifras Religiosas</div>
+
+    <nav>
+        <div class="busca">
+            <form action="Pesquisa.php" method="POST">
+            <label for="nome"></label>
+            <input type="search" placeholder="Qual a música de hoje?" onclick="abrirsugestao();" class="pesquisa" name="nome" autocomplete="off">
+			<button type="submit" class="fa fa-search"></button>
+			<div id="html"></div>
+            </form>
+        </div>
+        </nav>
+
+    <ol onclick="fecharmodal();">
+        <li><a href="#">Início</a></li>
+        <li><a href="#sugesta">Sugestões do Dia</a></li>
+        <li><a href="#acesso">Mais Acessadas</a></li>
+        <li><a href="#footer">Contato</a></li>
+    </ol>
+
+    <label for="check" class="barras">
+        <span class="fa fa-bars bra" id="barras"></span>
+        <span class="fa fa-times bra" id="times"></span>
+    </label>
+</nav>
+
+
+
+
+	  <div class="fecha" onclick="fecharmodal();">
+	</div>
+</body>
+</html>
