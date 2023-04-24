@@ -1,240 +1,77 @@
-@charset "utf-8";
-/* CSS Dócument */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
-
-.fecha{	height: 100vh;}
-
-	.navbar{
-			padding: 15px 30px;
-			margin: 0;
-			box-sizing: border-box;
-			font-family: 'Poppins', sans-serif;
-			display: flex;
-			width: 100%;
-			background-color: #6CA1BB;
-			justify-content: space-around;
-			position: fixed;
-			z-index: 10;
-			top: 0;
-			left: 0}
-
-		.navbar nav{
-			display: block
-		}
-
-	.lista{	display: none;
-				position: fixed;
-				top: 59.5px;
-				margin: auto 0.5%;
-				width: 386px;
-				height: 350px;
-				z-index: 3;
-				background-color: #fff;
-				border: none;
-				overflow: hidden;
-			outline: none;
-			line-height: 50px;
-			box-sizing: border-box;
+.divlogin{
+	width: 100%;
+	height: 25px;
+	background-color: #2c779c;
+	display: flex;
+	flex-direction: row;
+	justify-content: left;
+	align-items: center;
 }
 
-#html{	display: flex;
-	margin-left: 7px}
+.divlogin a{
+	color: #e6e6e6;
+	font-family: 'Poppins', sans-serif;
+	font-size: 0.9em;
+	font-weight: 500;
+	padding: 0 7px 0 7px;
+	height: 25px;
+}
 
-	nav .icone{	
-			font-size: 35px;
-			font-weight: 800;
-			color: #fff;
-			cursor: pointer}
+.divlogin a:hover{
+	background-color: #6CA1BB;
+}
 
-	nav ol{	
-			display: flex;
-			list-style: none;
-			margin: auto 0}
+.navbar{
+	width: 100%;
+	height: 55px;
+	background-color: #6CA1BB;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
 
-	nav ol li{	
-			margin: 0 2px}
-	nav ol li a{	
-			color: #fff;
-			font-size: 18px;
-			text-decoration: none;
-			text-transform: capitalize;
-			letter-spacing: 1px;
-			padding: 5px 10px}
+.navbar img{
+	cursor: pointer;
+	width: 40px;
+	margin: 20px
+}
 
-	nav ol li:hover a{ 
-			background-color: #fff;
-			color: #6CA1BB;
-			text-decoration: none;}	
-		
-	nav .busca{
-			display: flex;
-			margin: auto 0;
-			height: 35px;
-			line-height: 35px;}
+.menu a{
+	color: #fff;
+	margin: 15px;
+	font-weight: 600;
+}
 
-	nav .busca input{
-			border: none;
-			outline: none;
-			background: #fff;
-			height: 100%;
-			padding: 0 10px;
-			font-size: 20px;
-			width: 350px;
-			z-index: 4;}
+.menu a:hover{
+	color: #e6e6e6;
+	margin: 15px
+}
 
-	nav .busca button{
-			color: #6CA1BB;
-			font-size: 20px;
-			background: #fff;
-			height: 100%;
-			padding: 8px;
-			position: relative;
-			cursor: pointer;
-			z-index: 3;
-			border: none;
-			margin-left: -1%}
+.pesquisanav{
+	width: 20%;
+	height: 30px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	transition: .3s
+}
 
-	nav .busca button:hover{
-			color:#fff}
-
-	nav .busca button::after{	
-			height: 100%;
-			width: 0%;
-			content:'';
-			background: #ff003c;
-			position: absolute;
-			top: 0;
-			right: 0;
-			z-index: -1;
-			transition: 0.3s;}
-
-	nav .busca button:hover::after{	
-			width: 100%;}
-
-	nav .barras{
-			position: relative;
-			margin: auto;
-			display: none}
-
-	input[type="checkbox"]{
-			display: none}
-
-
-		@media screen and (max-width: 1414px){	.lista{	margin-left: 0%}}
-		@media screen and (max-width: 1405px){	.lista{	margin-left: 0%}}
-
-@media screen and (max-width: 1250px) {
-	.navbar{	
-			display: block;
-			padding: 0;
-			position: relative;}
-
-	nav .icone{	
-			display: inline-block;
-			padding: 15px 30px}
-
-	nav .busca{	
-			width: 100%;
-			display: inline-flex;
-			justify-content: center;
-			margin-bottom: 15px}
-
-	nav .busca input{
-			width: 240%;
-			margin-left: -80%}
-
-			nav .busca button{
-				margin-left: 160%;
-				margin-top: -11%}
-
-	.navbar ol{	
-			display: flex;
-			flex-direction: column;
-			background-color: #fff;
-			height: 0;
-			visibility: hidden;
-			transition: 0.3s;}
-
-	nav ol li{	
-			text-align: center;
-			transition: 0.3s 0.1 all;
-			opacity: 0;}
-
-	nav ol li a{	
-			color: #000;
-			font-size: 28px;
-			padding: 25px;
-			display: block}
-
-	nav .barras{	
-			display: block;
-			position: absolute;
-			top: 20px;
-			right: 80px;
-			cursor: pointer}
-
-	nav ol li:nth-child(1){	transform: translateX(-150px)}
-	nav ol li:nth-child(2){	transform: translateX(-200px)}
-	nav ol li:nth-child(3){	transform: translateX(-250px)}
-	nav ol li:nth-child(4){	transform: translateX(-300px)}
-	nav ol li:nth-child(5){	transform: translateX(-350px)}
-
-	nav .barras #times{	display: none; 			color: #fff;
-		font-size: 35px;}
-
-	nav .barras #barras{color: #fff; font-size: 35px;}
-
-	#check:checked ~ nav .barras #times{	display: block;}
-
-	#check:checked ~ nav .barras #barras{	display: none;}
-
-	#check:checked ~ nav ol{visibility: visible;height: 465px; 	color: #fff;font-size: 35px;}
-
-	#check:checked ~ nav ol li:nth-child(1),
-	#check:checked ~ nav ol li:nth-child(2),
-	#check:checked ~ nav ol li:nth-child(3),
-	#check:checked ~ nav ol li:nth-child(4),
-	#check:checked ~ nav ol li:nth-child(5){
-			transform: translateX(0);
-			opacity: 1;}
-
-
-	.lista{	position: absolute;
-				width: 795px;
-				margin-top: 67px;
-				margin-left: -260px}	
+.pesquisanav input{
+	height: 30px;
+	width: 100%;
+	background-color: #e5eef3;
+	outline: none;
+	border: none;
+	color:#151d22;
+	border-radius: 5px;
+	padding: 5px;
+	font-size: 1em;
+	font-family: 'Poppins', sans-serif;
 	}
+.pesquisanav:focus-within{
+	width: 35%
+}
 
-	@media (max-width: 820px) {
-
-		nav .busca input{
-			width: 170%;
-			margin-left: -35%}
-
-			nav .busca button{
-				margin-left: 135%;
-				margin-top: -11%}
-		
-				#html{	margin-left: -25%; width: 15%}
-
-	.lista{	margin-left: -32px; width:575px}
-	}
-
-
-	@media screen and (max-width: 620px){
-		#html{	margin-left: 112px; }
-        .lista{width: 334px; margin-left: -125px; margin-top: 59px}
-		nav .barras{	right: 20px}
-	
-		nav .busca input{
-			width: 100%;
-			margin-left: -10%}
-
-			nav .busca button{
-				margin-left: 90%;
-				margin-top: -11.5%;
-				}}
-
-	@media screen and (max-width: 420px){
-		nav .icone{	font-size: 27px;}
-	}
+.pesquisanav input::placeholder{
+	color: #6CA1BB
+}

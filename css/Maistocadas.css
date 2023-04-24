@@ -42,6 +42,11 @@ a{
 	
 }
 
+.musicas:hover .ranking{
+	background-color: #fff;
+	color: rgb(20, 123, 151);
+}
+
 .artistas{
 	display: flex;
 	flex-direction: row;
@@ -106,6 +111,7 @@ background: linear-gradient(225deg, rgba(21,29,34,1) 0%, rgba(20,123,151,1) 85%,
 	align-content: center;
 	justify-content: center;
 	justify-items: center;
+	transition: 0.4s;
 }
 
 .rankinga{
