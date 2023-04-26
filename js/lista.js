@@ -5,7 +5,7 @@ var html = `
 <style></style>
 </head>
 <body>
-<ul class="lista">
+<ul class="lista" id="listinha">
                 <li nome="a escolhida ricardo sá"><a href="aescolhida/A-Escolhida.html"><img src="img/logo.png" alt="Artista"><h3>A Escolhida - Ricardo Sá</h3></a></li>
                 <li nome="manso e humilde amados do eterno"><a href="mansoehumilde/Manso-e-humilde.html"><img src="img/logo.png" alt="Artista"><h3>Manso e Humilde - Amados do Eterno</h3></a></li>
                 <li nome="chuva de graça eliana ribeiro"><a href="chuvadegraca/Chuva-de-graca.html"><img src="img/logo.png" alt="Artista"><h3>Chuva de Graça - Eliana Ribeiro</h3></a></li>
@@ -40,13 +40,11 @@ var html = `
 
 $('#html').html(html);
 
-function abrirsugestao()
-{
-let modal = document.querySelector('.lista')
-modal.style.display = 'flex';
-}
+document.getElementById('inputpesquisa').addEventListener('focus', function() {
+    document.getElementById('listinha').style.display = 'block';
+});
 
-function fecharmodal(){
-let modal = document.querySelector('.lista')
-modal.style.display = 'none';
-}
+  
+  document.getElementById('inputpesquisa').addEventListener('blur', function() {
+    document.getElementById('listinha').style.display = 'none';
+  });

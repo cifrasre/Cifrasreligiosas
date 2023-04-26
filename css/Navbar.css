@@ -51,9 +51,10 @@
 	width: 20%;
 	height: 30px;
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 	align-items: center;
-	transition: .3s
+	transition: .3s;
+	z-index: 2;
 }
 
 .pesquisanav input{
@@ -74,4 +75,14 @@
 
 .pesquisanav input::placeholder{
 	color: #6CA1BB
+}
+
+.lista{	display: none;
+	overflow: hidden;
+	width: 100%;
+	padding: 15px;
+	height: 300px;
+	border: 1px solid #6CA1BB;
+	border-radius: 0 0 5px 5px;
+	background-color: #e5eef3;
 }
