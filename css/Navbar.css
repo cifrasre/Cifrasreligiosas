@@ -47,6 +47,10 @@
 	margin: 15px
 }
 
+#html{
+	width:100%
+}
+
 .pesquisanav{
 	width: 20%;
 	height: 30px;
@@ -73,16 +77,19 @@
 	width: 35%
 }
 
+.pesquisanav input:focus{
+	border-radius: 5px 5px 0 0;
+}
+
 .pesquisanav input::placeholder{
 	color: #6CA1BB
 }
 
 .lista{	display: none;
 	overflow: hidden;
+    text-overflow: ellipsis;
 	width: 100%;
-	padding: 15px;
 	height: 300px;
-	border: 1px solid #6CA1BB;
 	border-radius: 0 0 5px 5px;
 	background-color: #e5eef3;
 }
