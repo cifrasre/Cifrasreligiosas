@@ -27,6 +27,7 @@
             <a href="#">Fazer Cadastro</a>
         </div>
         <div class="navbar">
+            <div class="navesq">
             <img src="img/logonav.png">
            <div class="pesquisanav" id="busca"> 
             <input type="text" placeholder="Qual a música procurada?"  id="inputpesquisa">
@@ -37,6 +38,8 @@
                 <a href="#">Músicas</a>
                 <a href="#">Sobre Nós</a>
             </div>
+        </div>
+           <div class="conta"><span class="fa fa-user-circle "></span></div> 
         </div>
     </div>
 
@@ -272,18 +275,20 @@
             <div class="right box">
                 <h2>Nos Mande uma Mensagem</h2>
                 <div class="content">
-                    <form action="#" id="musica">
+                    <form action="https://api.staticforms.xyz/submit" method="post" id="musica">
+                        
                         <div class="email">
                             <div class="text" id="te">Email</div>
-                            <input type="email" required class="enputz">
+                            <input type="email" required class="enputz" name="email">
                         </div>
                         <div class="msg">
-                            <div class="text" id="te2">Mensagem</div>
-                            <textarea rows="2" cols="25" required class="enputz"></textarea>
+                            <div class="text" id="te2" >Mensagem</div>
+                            <textarea rows="2" cols="25" required class="enputz" name="message"></textarea>
                         </div>
                         <div class="btn">
-                            <button type="submit" class="btn btn-info" id="enviar">Enviar</button>
+                            <input type="submit" class="btn btn-info" id="enviar" value="Enviar" onclick="obrigado();">     
                         </div>
+                        <input type="hidden" name="accessKey" value="36802d78-3bac-462f-b3f4-42f1fb7387fa">
                     </form>
                 </div>
             </div>
@@ -293,7 +298,11 @@
 
 </div>
 
-
+<script>
+    function obrigado(){
+        window.location.replace("sucesso.html");
+    }
+</script>
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/slider.js"></script>
     <script src="js/lista.js"></script>

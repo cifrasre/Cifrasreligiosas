@@ -13,6 +13,7 @@ body{
     justify-items: center;
     justify-content: center;
     margin-top: 10px;
+    height: auto;
 }
 
 .divnavbar{
@@ -30,40 +31,6 @@ body{
     height: 150px;
     background-color: yellow;
     margin: 3%
-}
-
-.divsugestao{
-    width: 90%;
-    height: 600px;
-    flex-direction: row;
-    justify-content: space-between;
-    display: flex;
-}
-
-.divcalendario{
-    width: 35%;
-    height: 600px;
-    justify-content: space-between;
-    flex-direction: column;
-    display: flex;
-}
-
-.divtitulosu{
-    width: 100%;
-    height: 100px;
-    background-color: yellow;
-}
-
-.divcalendario2{
-    width: 100%;
-    height: 490px;
-    background-color: yellow;
-}
-
-.divsugestoesm{ 
-    width: 64%;
-    height: 600px;
-    background-color: yellow;
 }
 
 .divacessados{
@@ -84,7 +51,7 @@ body{
 
 .divtituloac{
     width: 100%;
-    height: 100px;
+    height: 170px;
     font-family: 'Poppins', sans-serif;
 	font-size: 1.7em;
 	color: rgb(111, 179, 207);
@@ -127,4 +94,17 @@ body{
 
     background-color: #151d22;
     color: #d9d9d9;
+}
+
+@media screen and (max-width: 900px) {
+	.divmusicasac, .divacessados{
+        height: auto;
+	}
+    .divmusicasac{
+        flex-direction: column;
+    }
+
+    .divartistasac, .divmusicasac2{
+        width: 100%;
+    }
 }

@@ -100,7 +100,7 @@ background: linear-gradient(225deg, rgba(21,29,34,1) 0%, rgba(20,123,151,1) 85%,
 
 
 .ranking{
-	width: 75px;
+	min-width: 80px;
 	height: 100%;
 	border-radius: 95px;
 	font-size: 49px;
@@ -125,3 +125,4 @@ background: linear-gradient(225deg, rgba(21,29,34,1) 0%, rgba(20,123,151,1) 85%,
 	justify-content: center;
 	justify-items: center;
 }
+
