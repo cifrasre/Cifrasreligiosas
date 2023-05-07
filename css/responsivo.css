@@ -1,3 +1,7 @@
+  html {
+    scroll-behavior: smooth;
+  }
+
 body{
     margin: 0;
     flex-direction: column;
@@ -106,5 +110,8 @@ body{
 
     .divartistasac, .divmusicasac2{
         width: 100%;
+    }
+    .divslider{
+        margin-top: 35px;
     }
 }

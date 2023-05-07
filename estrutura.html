@@ -28,17 +28,24 @@
         </div>
         <div class="navbar">
             <div class="navesq">
-            <img src="img/logonav.png">
+            
+                <img src="img/logonav.png" class="logo1">
            <div class="pesquisanav" id="busca"> 
             <input type="text" placeholder="Qual a música procurada?"  id="inputpesquisa">
             <div id="html"></div>
         </div> 
             <div class="menu">
-                <a href="#">Mais Acessadas</a>
+                <a href="#divmusicasac2">Mais Acessadas</a>
                 <a href="#">Músicas</a>
-                <a href="#">Sobre Nós</a>
+                <a href="#divfooter">Sobre Nós</a>
             </div>
+            <div class="navicones">
+            <span class="fa fa-bars" onclick="Menu();"></span>
+            <img src="img/logonav.png">
+            <span class="fa fa-user-circle "></span>
         </div>
+        </div>
+            
            <div class="conta"><span class="fa fa-user-circle "></span></div> 
         </div>
     </div>
@@ -74,7 +81,7 @@
             <p>Veja as Músicas e os Artistas mais acessados do site</p>
         </div>
         <div class="divmusicasac">
-            <div class="divmusicasac2">
+            <div class="divmusicasac2" id="divmusicasac2">
                 <h5>Músicas</h5>
             <br>
                 <a href="aescolhida/A-Escolhida.html">
@@ -238,7 +245,7 @@
         <a href="letras/Z.html" id="Z1"><button type="button" class="btn btn-dark">Z</button></a>
     </div>
 
-    <div class="divfooter">
+    <div class="divfooter" id="divfooter">
         <div class="main-content">
             <div class="left box">
                 <h2>Sobre Nós</h2>
@@ -305,6 +312,7 @@
 </script>
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/slider.js"></script>
+    <script src="js/navbar.js"></script>
     <script src="js/lista.js"></script>
     <script src="js/sistema_de_busca.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->

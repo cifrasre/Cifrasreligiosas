@@ -28,7 +28,6 @@
 	display: flex;
 	flex-direction: row;
 	align-items: center;
-	justify-items: flex-start;
 }
 
 .navesq{
@@ -55,7 +54,6 @@
 
 .menu a:hover{
 	color: #e6e6e6;
-	margin: 15px
 }
 
 #html{
@@ -88,10 +86,19 @@
 	width: 40%
 }
 
-.navbar .conta{
+.navbar span{
 	font-size: 35px;
 	color: #fff;
-	justify-self: end;
+}
+
+.navicones {
+	display: none;
+	flex-direction: row;
+	justify-content: space-between;
+	width: 100%;
+	align-items: center;
+	align-content: center;
+	height: 25px;
 }
 
 .pesquisanav input:focus{
@@ -109,4 +116,76 @@
 	height: 300px;
 	border-radius: 0 0 5px 5px;
 	background-color: #e5eef3;
+}
+
+@media screen and (max-width: 900px) {
+	.navesq .fa-bars, .navesq .fa-user-circle{
+		font-size: 25px;
+	}
+
+	.navicones{
+		display: flex
+	}
+
+	.navesq .fa-bars:hover, .navesq .fa-user-circle:hover{
+		color: #c5d8e2;
+		cursor: pointer
+	}
+
+	.pesquisanav:focus-within{
+		width: 100%
+	}
+
+	.navbar{
+		height: 90px;
+		flex-direction: column;
+		padding-left: 5%;
+		padding-right: 5%;
+	}
+
+	.pesquisanav{
+		width: 100%;
+		
+	}
+
+	.conta, .logo1{
+		display: none;
+	}
+
+	.navesq{
+		flex-direction: column-reverse;
+		width: 100%;
+		margin-right: 5%;
+		margin-left: 5%;
+		justify-content: space-around;
+		height: 90px;
+	}
+
+	.menu{
+		display: none;
+		position: absolute;
+		flex-direction: column;
+		top: 113px;
+		height: 150px;
+		z-index: 4;
+		background-color: #6CA1BB;
+		width: 100%;
+		align-items: center;
+		font-size: 16px;
+	}
+
+	.menu a{
+		width: 100%;
+		display: flex;
+		height: 50px;
+		align-items: center;
+		align-content: center;
+		justify-content: center;
+		justify-items: center;
+		margin: 0;
+	}
+
+	.menu a:hover{
+		background-color: #2c779c;
+	}
 }
