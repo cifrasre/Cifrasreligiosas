@@ -17,6 +17,11 @@
 	height: 25px;
 }
 
+.conta span:hover{
+		color: #c5d8e2;
+		cursor: pointer
+	}
+
 .divlogin a:hover{
 	background-color: #6CA1BB;
 }
@@ -172,6 +177,7 @@
 		width: 100%;
 		align-items: center;
 		font-size: 16px;
+		transition: .4s;
 	}
 
 	.menu a{
@@ -183,6 +189,7 @@
 		justify-content: center;
 		justify-items: center;
 		margin: 0;
+		transition: .4s;
 	}
 
 	.menu a:hover{

@@ -1,529 +1,67 @@
-﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="pt-br">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cifras Religiosas - suas cifras estão aqui!</title>
-    <!-- Bootstrap -->
-	<link href="css/bootstrap-4.3.1.css" rel="stylesheet">
-	<link href="css/Navbar.css" rel="stylesheet">
-	<link href="css/Carrosel.css" rel="stylesheet">
-	<link href="css/Sugestao.css" rel="stylesheet">
-	<link href="css/Sugestoes.css" rel="stylesheet">
-	<link href="css/Maistocadas.css" rel="stylesheet">
-	<link href="css/Footer.css" rel="stylesheet">
-	<link href="css/anuncio.css" rel="stylesheet">
-	<link href="css/abecedario.css" rel="stylesheet">
-	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-	<script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
-	<script src="../js/powerpoint.js"></script>
-	<link rel="icon" type="image/png" href="img/Logo.png">
-		<meta name="viewport" content="width=device-width, user-scalable=no">
-	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3144818185892539"
-     crossorigin="anonymous"></script>
-	<style>
-body{	overflow-x: hidden;}
+    <link rel="icon" type="image/png" href="img/Logo.png">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap');
+        body{
+            background-color: #6CA1BB;
+            display: flex;
+            justify-content: center;
+            justify-items: center;
+            align-items: center;
+            align-content: center;
+            height: 100vh;
+            margin: 0;
+            flex-direction: column;
+        }
 
-	</style>
-  </head>
-	
-  <body>
+        h1{
+            font-family: 'Poppins', sans-serif;
+            font-weight: 300;
+            cursor: pointer;
+            font-size: 3em;
+            color: #6CA1BB;
+            -webkit-text-stroke-width: 0.3px;
+            -webkit-text-stroke-color: #e6e6e6;
+            animation: preencher 2s forwards;
+            transform: rotate(0deg)}
 
+        @keyframes preencher {
+            0%{color:#6CA1BB;}100%{color: #e6e6e6;}
+        }
 
+        .carregando{
+            width: 40px;
+            height: 40px;
+            border: 5px solid;
+            border-radius: 50px;
+            border-color: #151d22 #e6e6e6 #e6e6e6 #e6e6e6;
+            animation: rodar 1s infinite
+        }
 
-<!--barra de navegação-->
+        @keyframes rodar{
+            0%{ transform: rotate(0deg)}
 
-<input type="checkbox" id="check">
-
-<nav class="navbar">
-    <div class="icone" onclick="fecharmodal();">Cifras Religiosas</div>
-
-    <nav>
-        <div class="busca">
-            <form action="Pesquisa.php" method="POST">
-            <label for="nome"></label>
-            <input type="search" placeholder="Qual a música de hoje?" onclick="abrirsugestao();" class="pesquisa" name="nome" autocomplete="off">
-			<button type="submit" class="fa fa-search"></button>
-			<div id="html"></div>
-            </form>
-        </div>
-        </nav>
-
-    <ol onclick="fecharmodal();">
-        <li><a href="#">Início</a></li>
-        <li><a href="#sugesta">Sugestões do Dia</a></li>
-        <li><a href="#acesso">Mais Acessadas</a></li>
-        <li><a href="#footer">Contato</a></li>
-    </ol>
-
-    <label for="check" class="barras">
-        <span class="fa fa-bars bra" id="barras"></span>
-        <span class="fa fa-times bra" id="times"></span>
-    </label>
-</nav>
-
-
-
-
-	  <div class="fecha" >
-<!--slider -->
- 
-<slider>
-	<div class="slide active"><a href="slider/primeiro.html"><h2>Mês de Quaresma</h2><p>Confira as músicas para o tempo que antecede a Páscoa</p></a></div>
-	<div class="slide" id="slide1"><a href="slider/segundo.html"><h2>Padres Cantores</h2><p>Veja a lista de padres que também dão um palhinha</p></a></div>
-	<div class="slide" id="slide2"><a href="Pesquisa.php"><h2>Novas Músicas</h2><p>Confira as músicas novas no site</p></a></div>
-	<div class="slide" id="slide3"><a href="Pesquisa.php"><h2>Procure sua Música</h2><p>Pesquise "aquela" música mais detalhadamente</p></a></div>
-	<div class="slide" id="slide4"><a href="#sugesta"><h2>1º Dómingo da Quaresma</h2><p>Veja nossas sugestões diárias</p></a></div>
-
-	<div class="navegacao">
-		<div class="btn active"></div>
-		<div class="btn"></div>
-		<div class="btn"></div>
-		<div class="btn"></div>
-		<div class="btn"></div>
-	</div>
-</slider>
-
-
-
+            100%{
+                transform: rotate(360deg)
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Cifras Religiosas</h1>
+    <div class="carregando"></div>
+</body>
 <script>
-
-function abrir(){
-	document.getElementById("segundo").classList.add('activido');
-	document.getElementById("segundo2").classList.add('activido');
-	document.getElementById("primeiro").classList.remove('activido');
-	document.getElementById("primeiro1").classList.remove('activido');
-	document.getElementById("direita").style.display = "none";
-	document.getElementById("esquerda").style.display = "none";
-	document.getElementById("direita2").style.display = "block";
-	document.getElementById("esquerda2").style.display = "block";
-}
-
-function abrir2(){
-	document.getElementById("terceiro").classList.add('activido');
-	document.getElementById("terceiro3").classList.add('activido');
-	document.getElementById("segundo").classList.remove('activido');
-	document.getElementById("segundo2").classList.remove('activido');
-	document.getElementById("direita2").style.display = "none";
-	document.getElementById("esquerda2").style.display = "none";
-	document.getElementById("direita3").style.display = "block";
-	document.getElementById("esquerda3").style.display = "block";
-}
-
-function abrir3(){
-	document.getElementById("primeiro").classList.add('activido');
-	document.getElementById("primeiro1").classList.add('activido');
-	document.getElementById("segundo").classList.remove('activido');
-	document.getElementById("segundo2").classList.remove('activido');
-	document.getElementById("direita2").style.display = "none";
-	document.getElementById("esquerda2").style.display = "none";
-	document.getElementById("direita").style.display = "block";
-	document.getElementById("esquerda").style.display = "block";
-}
-
-function abrir4(){
-	document.getElementById("segundo").classList.add('activido');
-	document.getElementById("segundo2").classList.add('activido');
-	document.getElementById("terceiro").classList.remove('activido');
-	document.getElementById("terceiro3").classList.remove('activido');
-	document.getElementById("direita3").style.display = "none";
-	document.getElementById("esquerda3").style.display = "none";
-	document.getElementById("direita2").style.display = "block";
-	document.getElementById("esquerda2").style.display = "block";
-}
+    var temporizador = setTimeout(abrir, 3000);
+    function abrir(){
+        window.open("estrutura.html", "_self");
+    }
 </script>
 
-
-
-<div class="anunncio" id="sugesta">
-	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3144818185892539"
-     crossorigin="anonymous"></script>
-<!-- index2 -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-3144818185892539"
-     data-ad-slot="5719773495"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-</div>
-
-
-   <!--sugestoes-->
-
-
-
-
-<!--Julho-->
-
-<div class="sugestao" >
-<h3>Sugestões do Dia</h3>
-<p>Escolha o dia Missa/Celebração</p>
-</div>
-
-<div class="selecionar"><h3>Selecione o Dia Preferível</h3></div>
-
-<div class="lado2">
-	<span class="fa fa-angle-double-left" id="esquerda"></span>
-	<span class="fa fa-angle-double-left" id="esquerda2" onclick="abrir3();"></span>
-	<span class="fa fa-angle-double-left" id="esquerda3" onclick="abrir4();"></span>
-	<span class="fa fa-angle-double-right" id="direita" onclick="abrir();"></span>
-	<span class="fa fa-angle-double-right" id="direita2" onclick="abrir2();"></span>
-	<span class="fa fa-angle-double-right" id="direita3" onclick="abrir5();"></span>
-</div>
-
-	<div class="calendario activido" id="primeiro">
-		<div class="data">
-			<h3>Abril</h3>
-			<div class="dias" id="dia">
-				<div class="dia"><b>D</b></div>
-				<div class="dia"><b>S</b></div>
-				<div class="dia"><b>T</b></div>
-				<div class="dia"><b>Q</b></div>
-				<div class="dia"><b>Q</b></div>
-				<div class="dia"><b>S</b></div>
-				<div class="dia"><b>S</b></div>
-</div>
-</div>
-</div>
-
-<div class="mytabs activido"  id="primeiro1">
-	<div class="numero2"></div>
-	<div class="numero2"></div>
-	<div class="numero2"></div>
-	<div class="numero2"></div>
-	<div class="numero2"></div>
-	<div class="numero2"></div>
-	<input type="radio" id="1" name="mytabs" ><label for="1">1</label><div class="tab"><iframe scrolling="no" src="dias/nada.html"></iframe></div>
-	<input type="radio" id="2" name="mytabs"><label for="2">2</label><div class="tab"><iframe scrolling="no" src="dias/nada.html"></iframe></div>
-	<input type="radio" id="3" name="mytabs"><label for="3">3</label><div class="tab"><iframe scrolling="no" src="dias/nada.html"></iframe></div>
-	<input type="radio" id="4" name="mytabs"><label for="4">4</label><div class="tab"><iframe scrolling="no" src="dias/nada.html"></iframe></div>
-	<input type="radio" id="5" name="mytabs"><label for="5">5</label><div class="tab"><iframe scrolling="no" src="dias/nada.html"></iframe></div>
-	<input type="radio" id="6" name="mytabs"><label for="6">6</label><div class="tab"><iframe scrolling="no" src="dias/nada.html"></iframe></div>
-	<input type="radio" id="7" name="mytabs"><label for="7">7</label><div class="tab"><iframe scrolling="no" src="dias/nada.html"></iframe></div>
-	<input type="radio" id="8" name="mytabs"><label for="8">8</label><div class="tab"><iframe scrolling="no" src="dias/nada.html"></iframe></div>
-	<input type="radio" id="9" name="mytabs"><label for="9">9</label><div class="tab"><iframe scrolling="no" src="dias/nada.html"></iframe></div>
-	<input type="radio" id="10" name="mytabs" checked="checked"><label for="10">10</label><div class="tab"><iframe scrolling="no" src="dias/28tc.html"></iframe></div>
-	<input type="radio" id="11" name="mytabs"><label for="11">11</label><div class="tab"><iframe scrolling="no" src="dias/28tc.html"></iframe></div>
-	<input type="radio" id="12" name="mytabs"><label for="12">12</label><div class="tab"><iframe scrolling="no" src="dias/28tc.html"></iframe></div>
-	<input type="radio" id="13" name="mytabs"><label for="13">13</label><div class="tab"><iframe scrolling="no" src="dias/28tc.html"></iframe></div>
-	<input type="radio" id="14" name="mytabs"><label for="14">14</label><div class="tab"><iframe scrolling="no" src="dias/28tc.html"></iframe></div>
-	<input type="radio" id="15" name="mytabs"><label for="15">15</label><div class="tab"><iframe scrolling="no" src="dias/28tcsabado.html"></iframe></div>
-	<input type="radio" id="16" name="mytabs"><label for="16">16</label><div class="tab"><iframe scrolling="no" src="dias/nada.html"></iframe></div>
-	<input type="radio" id="17" name="mytabs"><label for="17">17</label><div class="tab"><iframe scrolling="no" src="dias/nada.html"></iframe></div>
-	<input type="radio" id="18" name="mytabs"><label for="18">18</label><div class="tab"><iframe scrolling="no" src="dias/nada.html"></iframe></div>
-	<input type="radio" id="19" name="mytabs"><label for="19">19</label><div class="tab"><iframe scrolling="no" src="dias/nada.html"></iframe></div>
-	<input type="radio" id="20" name="mytabs"><label for="20">20</label><div class="tab"><iframe scrolling="no" src="dias/nada.html"></iframe></div>
-	<input type="radio" id="21" name="mytabs"><label for="21">21</label><div class="tab"><iframe scrolling="no" src="dias/nada.html"></iframe></div>
-	<input type="radio" id="22" name="mytabs"><label for="22">22</label><div class="tab"><iframe scrolling="no" src="dias/nada.html"></iframe></div>
-	<input type="radio" id="23" name="mytabs"><label for="23">23</label><div class="tab"><iframe scrolling="no" src="dias/nada.html"></iframe></div>
-	<input type="radio" id="24" name="mytabs"><label for="24">24</label><div class="tab"><iframe scrolling="no" src="dias/nada.html"></iframe></div>
-	<input type="radio" id="25" name="mytabs"><label for="25">25</label><div class="tab"><iframe scrolling="no" src="dias/nada.html"></iframe></div>
-	<input type="radio" id="26" name="mytabs"><label for="26">26</label><div class="tab"><iframe scrolling="no" src="dias/nada.html"></iframe></div>
-	<input type="radio" id="27" name="mytabs"><label for="27">27</label><div class="tab"><iframe scrolling="no" src="dias/nada.html"></iframe></div>
-	<input type="radio" id="28" name="mytabs"><label for="28">28</label><div class="tab"><iframe scrolling="no" src="dias/nada.html"></iframe></div>
-	<input type="radio" id="29" name="mytabs"><label for="29">29</label><div class="tab"><iframe scrolling="no" src="dias/nada.html"></iframe></div>
-	<input type="radio" id="30" name="mytabs"><label for="30">30</label><div class="tab"><iframe scrolling="no" src="dias/nada.html"></iframe></div>
-	<div class="numero2"></div>
-	  </div>
-
-
-	<!--Novembro-->
-
-	  <div class="calendario" id="segundo">
-		<div class="data">
-			<h3>Maio</h3>
-			<div class="dias" id="dia">
-				<div class="dia"><b>D</b></div>
-				<div class="dia"><b>S</b></div>
-				<div class="dia"><b>T</b></div>
-				<div class="dia"><b>Q</b></div>
-				<div class="dia"><b>Q</b></div>
-				<div class="dia"><b>S</b></div>
-				<div class="dia"><b>S</b></div>
-</div>
-</div>
-</div>
-
-<div class="mytabs" id="segundo2">
-	<div class="numero2"></div>
-	<input type="radio" id="32" name="mytabs"><label for="32">1</label><div class="tab"><iframe scrolling="no" src="dias/nada.html"></iframe></div>
-	<input type="radio" id="33" name="mytabs"><label for="33">2</label><div class="tab"><iframe scrolling="no" src="dias/nada.html"></iframe></div>
-	<input type="radio" id="34" name="mytabs"><label for="34">3</label><div class="tab"><iframe scrolling="no" src="dias/nada.html"></iframe></div>
-	<input type="radio" id="35" name="mytabs"><label for="35">4</label><div class="tab"><iframe scrolling="no" src="dias/nada.html"></iframe></div>
-	<input type="radio" id="36" name="mytabs"><label for="36">5</label><div class="tab"><iframe scrolling="no" src="dias/nada.html"></iframe></div>
-	<input type="radio" id="37" name="mytabs"><label for="37">6</label><div class="tab"><iframe scrolling="no" src="dias/nada.html"></iframe></div>
-	<input type="radio" id="38" name="mytabs"><label for="38">7</label><div class="tab"><iframe scrolling="no" src="dias/nada.html"></iframe></div>
-	<input type="radio" id="39" name="mytabs"><label for="39">8</label><div class="tab"><iframe scrolling="no" src="dias/nada.html"></iframe></div>
-	<input type="radio" id="40" name="mytabs"><label for="40">9</label><div class="tab"><iframe scrolling="no" src="dias/nada.html"></iframe></div>
-	<input type="radio" id="41" name="mytabs"><label for="41">10</label><div class="tab"><iframe scrolling="no" src="dias/nada.html"></iframe></div>
-	<input type="radio" id="42" name="mytabs"><label for="42">11</label><div class="tab"><iframe scrolling="no" src="dias/nada.html"></iframe></div>
-	<input type="radio" id="43" name="mytabs"><label for="43">12</label><div class="tab"><iframe scrolling="no" src="dias/nada.html"></iframe></div>
-	<input type="radio" id="44" name="mytabs"><label for="44">13</label><div class="tab"><iframe scrolling="no" src="dias/nada.html"></iframe></div>
-	<input type="radio" id="45" name="mytabs"><label for="45">14</label><div class="tab"><iframe scrolling="no" src="dias/nada.html"></iframe></div>
-	<input type="radio" id="46" name="mytabs"><label for="46">15</label><div class="tab"><iframe scrolling="no" src="dias/nada.html"></iframe></div>
-	<input type="radio" id="47" name="mytabs"><label for="47">16</label><div class="tab"><iframe scrolling="no" src="dias/nada.html"></iframe></div>
-	<input type="radio" id="48" name="mytabs"><label for="48">17</label><div class="tab"><iframe scrolling="no" src="dias/nada.html"></iframe></div>
-	<input type="radio" id="49" name="mytabs"><label for="49">18</label><div class="tab"><iframe scrolling="no" src="dias/nada.html"></iframe></div>
-	<input type="radio" id="50" name="mytabs"><label for="50">19</label><div class="tab"><iframe scrolling="no" src="dias/nada.html"></iframe></div>
-	<input type="radio" id="51" name="mytabs"><label for="51">20</label><div class="tab"><iframe scrolling="no" src="dias/nada.html"></iframe></div>
-	<input type="radio" id="52" name="mytabs"><label for="52">21</label><div class="tab"><iframe scrolling="no" src="dias/nada.html"></iframe></div>
-	<input type="radio" id="53" name="mytabs"><label for="53">22</label><div class="tab"><iframe scrolling="no" src="dias/nada.html"></iframe></div>
-	<input type="radio" id="54" name="mytabs"><label for="54">23</label><div class="tab"><iframe scrolling="no" src="dias/nada.html"></iframe></div>
-	<input type="radio" id="55" name="mytabs"><label for="55">24</label><div class="tab"><iframe scrolling="no" src="dias/nada.html"></iframe></div>
-	<input type="radio" id="56" name="mytabs"><label for="56">25</label><div class="tab"><iframe scrolling="no" src="dias/nada.html"></iframe></div>
-	<input type="radio" id="57" name="mytabs"><label for="57">26</label><div class="tab"><iframe scrolling="no" src="dias/nada.html"></iframe></div>
-	<input type="radio" id="58" name="mytabs"><label for="58">27</label><div class="tab"><iframe scrolling="no" src="dias/nada.html"></iframe></div>
-	<input type="radio" id="59" name="mytabs"><label for="59">28</label><div class="tab"><iframe scrolling="no" src="dias/nada.html"></iframe></div>
-	<input type="radio" id="60" name="mytabs"><label for="60">29</label><div class="tab"><iframe scrolling="no" src="dias/nada.html"></iframe></div>
-	<input type="radio" id="61" name="mytabs"><label for="61">30</label><div class="tab"><iframe scrolling="no" src="dias/nada.html"></iframe></div>
-	<input type="radio" id="62" name="mytabs"><label for="62">31</label><div class="tab"><iframe scrolling="no" src="dias/nada.html"></iframe></div>
-	<div class="numero2"></div>
-	  </div>
-
-<!--Dezembro-->
-
-	  <div class="calendario" id="terceiro">
-		<div class="data">
-			<h3>Junho</h3>
-			<div class="dias" id="dia">
-				<div class="dia"><b>D</b></div>
-				<div class="dia"><b>S</b></div>
-				<div class="dia"><b>T</b></div>
-				<div class="dia"><b>Q</b></div>
-				<div class="dia"><b>Q</b></div>
-				<div class="dia"><b>S</b></div>
-				<div class="dia"><b>S</b></div>
-</div>
-</div>
-</div>
-
-<div class="mytabs" id="terceiro3">
-	<div class="numero2"></div>
-	<div class="numero2"></div>
-	<div class="numero2"></div>
-	<div class="numero2"></div>
-	<input type="radio" id="63" name="mytabs"><label for="63">1</label><div class="tab"><iframe scrolling="no" src="dias/nada.html"></iframe></div>
-	<input type="radio" id="64" name="mytabs"><label for="64">2</label><div class="tab"><iframe scrolling="no" src="dias/nada.html"></iframe></div>
-	<input type="radio" id="65" name="mytabs"><label for="65">3</label><div class="tab"><iframe scrolling="no" src="dias/nada.html"></iframe></div>
-	<input type="radio" id="66" name="mytabs"><label for="66">4</label><div class="tab"><iframe scrolling="no" src="dias/nada.html"></iframe></div>
-	<input type="radio" id="67" name="mytabs"><label for="67">5</label><div class="tab"><iframe scrolling="no" src="dias/nada.html"></iframe></div>
-	<input type="radio" id="68" name="mytabs"><label for="68">6</label><div class="tab"><iframe scrolling="no" src="dias/nada.html"></iframe></div>
-	<input type="radio" id="69" name="mytabs"><label for="69">7</label><div class="tab"><iframe scrolling="no" src="dias/nada.html"></iframe></div>
-	<input type="radio" id="70" name="mytabs"><label for="70">8</label><div class="tab"><iframe scrolling="no" src="dias/nada.html"></iframe></div>
-	<input type="radio" id="71" name="mytabs"><label for="71">9</label><div class="tab"><iframe scrolling="no" src="dias/nada.html"></iframe></div>
-	<input type="radio" id="72" name="mytabs"><label for="72">10</label><div class="tab"><iframe scrolling="no" src="dias/nada.html"></iframe></div>
-	<input type="radio" id="73" name="mytabs"><label for="73">11</label><div class="tab"><iframe scrolling="no" src="dias/nada.html"></iframe></div>
-	<input type="radio" id="74" name="mytabs"><label for="74">12</label><div class="tab"><iframe scrolling="no" src="dias/nada.html"></iframe></div>
-	<input type="radio" id="75" name="mytabs"><label for="75">13</label><div class="tab"><iframe scrolling="no" src="dias/nada.html"></iframe></div>
-	<input type="radio" id="76" name="mytabs"><label for="76">14</label><div class="tab"><iframe scrolling="no" src="dias/nada.html"></iframe></div>
-	<input type="radio" id="77" name="mytabs"><label for="77">15</label><div class="tab"><iframe scrolling="no" src="dias/nada.html"></iframe></div>
-	<input type="radio" id="78" name="mytabs"><label for="78">16</label><div class="tab"><iframe scrolling="no" src="dias/nada.html"></iframe></div>
-	<input type="radio" id="79" name="mytabs"><label for="79">17</label><div class="tab"><iframe scrolling="no" src="dias/nada.html"></iframe></div>
-	<input type="radio" id="80" name="mytabs"><label for="80">18</label><div class="tab"><iframe scrolling="no" src="dias/nada.html"></iframe></div>
-	<input type="radio" id="81" name="mytabs"><label for="81">19</label><div class="tab"><iframe scrolling="no" src="dias/nada.html"></iframe></div>
-	<input type="radio" id="82" name="mytabs"><label for="82">20</label><div class="tab"><iframe scrolling="no" src="dias/nada.html"></iframe></div>
-	<input type="radio" id="83" name="mytabs"><label for="83">21</label><div class="tab"><iframe scrolling="no" src="dias/nada.html"></iframe></div>
-	<input type="radio" id="84" name="mytabs"><label for="84">22</label><div class="tab"><iframe scrolling="no" src="dias/nada.html"></iframe></div>
-	<input type="radio" id="85" name="mytabs"><label for="85">23</label><div class="tab"><iframe scrolling="no" src="dias/nada.html"></iframe></div>
-	<input type="radio" id="86" name="mytabs"><label for="86">24</label><div class="tab"><iframe scrolling="no" src="dias/nada.html"></iframe></div>
-	<input type="radio" id="87" name="mytabs"><label for="87">25</label><div class="tab"><iframe scrolling="no" src="dias/nada.html"></iframe></div>
-	<input type="radio" id="88" name="mytabs"><label for="88">26</label><div class="tab"><iframe scrolling="no" src="dias/nada.html"></iframe></div>
-	<input type="radio" id="89" name="mytabs"><label for="89">27</label><div class="tab"><iframe scrolling="no" src="dias/nada.html"></iframe></div>
-	<input type="radio" id="90" name="mytabs"><label for="90">28</label><div class="tab"><iframe scrolling="no" src="dias/nada.html"></iframe></div>
-	<input type="radio" id="91" name="mytabs"><label for="91">29</label><div class="tab"><iframe scrolling="no" src="dias/nada.html"></iframe></div>
-	<input type="radio" id="92" name="mytabs"><label for="92">30</label><div class="tab"><iframe scrolling="no" src="dias/nada.html"></iframe></div>
-	<div class="numero2"></div>
-	  </div>
-
-	  <!--Mais Tocadas-->
-
-<div class="acessados">
-	<h3>Ranking dos Mais Acessados</h3>
-	<p>Veja as Músicas e os Artistas mais acessados do site</p>
-
-	<div class="musica">
-		<h5>Músicas</h5>
-		<a href="aescolhida/A-Escolhida.html"><div class="musicas">
-			<div class="ranking"><p>1</p></div>
-			<h6>Ricardo Sá</h6>
-			<h4>A Escolhida</h4>
-		</div></a>
-	
-		<a href="vemlouvar/Vem-louvar.html"><div class="musicas">
-			<div class="ranking"><p>2</p></div>
-			<h6 id="ranking2">Padre Jonas</h6>
-			<h4>Vem Louvar</h4>
-		</div></a>
-	
-		<a href="aondeiremosnos/Aonde-iremos-nos.html"><div class="musicas">
-			<div class="ranking"><p>3</p></div>
-			<h6 id="ranking3">Agnus Dei</h6>		
-			<h4>Aonde Iremos Nós</h4>
-		</div></a>
-	
-		<a href="ficasempre/Fica-sempre.html"><div class="musicas">
-			<div class="ranking"><p>4</p></div>
-			<h6 id="ranking3">Alberto Costa</h6>
-			<h4>Fica Sempre</h4>
-		</div></a>
-	
-		<a href="quemeessaqueavanca/Quem-e-essa.html"><div class="musicas">
-			<div class="ranking"><p>5</p></div>
-			<h6 id="ranking3">Padre Marcelo Rossi</h6>			
-			<h4>Quem é Essa que Avança...</h4>
-		</div></a>
-		</div>
-
-
-	<div class="artistas">
-	<h5>Artistas</h5>
-	<a href="artista/ricardosa.html"><div class="artista">
-		<div class="artista-img"><img src="img/logo.png"></div><div class="fa fa-chevron-right" aria-hidden="true"></div>
-		<h4>Ricardo Sá</h4>
-	</div></a>
-
-	<a href="artista/cnbb.html"><div class="artista">
-		<div class="artista-img"><img src="img/logo.png"></div><div class="fa fa-chevron-right" aria-hidden="true"></div>
-		<h4>Zé Vicente</h4>
-	</div></a>
-
-	<a href="artista/padrezezinho.html"><div class="artista">
-		<div class="artista-img"><img src="img/logo.png"></div><div class="fa fa-chevron-right" aria-hidden="true"></div>
-		<h4>Padre Zezinho</h4>
-	</div></a>
-
-	<a href="artista/padremarcelorossi.html"><div class="artista">
-		<div class="artista-img"><img src="img/logo.png"></div><div class="fa fa-chevron-right" aria-hidden="true"></div>
-		<h4>P. Marcelo Rossi</h4>
-	</div></a>
-
-	<a href="artista/catolicas.html"><div class="artista">
-		<div class="artista-img"><img src="img/logo.png"></div><div class="fa fa-chevron-right" aria-hidden="true"></div>
-		<h4>Católicas</h4>
-	</div></a>
-	</div>
-	</div>
-	
-	  <!--Anuncio-->
-	  
-	 <div class="banner-container"  id="acesso">
-		<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3144818185892539"
-     crossorigin="anonymous"></script>
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-format="fluid"
-     data-ad-layout-key="-fb+5w+4e-db+86"
-     data-ad-client="ca-pub-3144818185892539"
-     data-ad-slot="9152855699"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-	 </div>
-	  
-	  <!--Abecedário-->
-	  
-	  <div class="btn-toolbar" id="abecedario" role="toolbar" aria-label="Abecedário">
-  <div class="btn-group mr-2" role="group" aria-label="First group">
-      <a href="letras/A.html" id="A1"><button type="submit" class="btn btn-dark">A</button></a>
-      <a href="letras/B.html"><button type="button" class="btn btn-dark">B</button></a>
-      <a href="letras/C.html"><button type="button" class="btn btn-dark">C</button></a>
-      <a href="letras/D.html"><button type="button" class="btn btn-dark">D</button></a>
-	  <a href="letras/E.html"><button type="button" class="btn btn-dark">E</button></a>
-	  <a href="letras/F.html"><button type="button" class="btn btn-dark">F</button></a>
-	  <a href="letras/G.html"><button type="button" class="btn btn-dark">G</button></a>
-	  <a href="letras/H.html"><button type="button" class="btn btn-dark">H</button></a>
-	  <a href="letras/I.html"><button type="button" class="btn btn-dark">I</button></a>
-	  <a href="letras/J.html"><button type="button" class="btn btn-dark">J</button></a>
-	  <a href="letras/K.html"><button type="button" class="btn btn-dark">K</button></a>
-	  <a href="letras/L.html"><button type="button" class="btn btn-dark">L</button></a>
-	  <a href="letras/M.html"><button type="button" class="btn btn-dark">M</button></a>
-	  <a href="letras/N.html"><button type="button" class="btn btn-dark">N</button></a>
-	  <a href="letras/O.html"><button type="button" class="btn btn-dark">O</button></a>
-      <a href="letras/P.html"><button type="button" class="btn btn-dark">P</button></a>
-      <a href="letras/Q.html"><button type="button" class="btn btn-dark">Q</button></a>
-      <a href="letras/R.html"><button type="button" class="btn btn-dark">R</button></a>
-	  <a href="letras/S.html"><button type="button" class="btn btn-dark">S</button></a>
-	  <a href="letras/T.html"><button type="button" class="btn btn-dark">T</button></a>
-	  <a href="letras/U.html"><button type="button" class="btn btn-dark">U</button></a>
-	  <a href="letras/V.html"><button type="button" class="btn btn-dark">V</button></a>
-	  <a href="letras/W.html"><button type="button" class="btn btn-dark">W</button></a>
-	  <a href="letras/X.html"><button type="button" class="btn btn-dark">X</button></a>
-	  <a href="letras/Y.html"><button type="button" class="btn btn-dark">Y</button></a>
-	  <a href="letras/Z.html" id="Z1"><button type="button" class="btn btn-dark">Z</button></a>
-
-		  </div>
-	  </div>
-		  
-	  <div class="anunciofinal">
-	 
-	</div>
-	
-	  <!--Footer-->
-	  <br>
-	  <div class="preto"></div>
-	  <div class="footer" id="footer">
-	  	<div class="main-content">
-		  <div class="left box">
-			<h2>Sobre Nós</h2>
-			  <div class="content">
-			  <p class="texto">Este Site foi Criado em 2020, com o intuíto de ajudar as pessoas que precisam ter cifras para missas e cultos, esperamos ter te ajudado, se sim, por favor volte aqui 😉.</p>
-				  <div class="social">
-		<a href="https://www.facebook.com/cifrasreligioosas" target="_blank"><span class="fab fa-facebook-f"></span></a>
-		<a href="https://www.instagram.com/cifrasreligiosas/" target="_blank"><span class="fab fa-instagram"></span></a>
-		<a href="https://twitter.com/Cifreligiosas" target="_blank"><span class="fab fa-twitter"></span></a>
-				  </div>
-			  </div>
-			</div>
-			<div class="center box">
-			<h2>&nbsp;Contato</h2>
-				<div class="content">
-					<div class="place">
-					<span class="fas fa-map-marker-alt"></span>
-					<span class="text">Joinville, Santa Catarina</span>
-					</div>
-					<div class="phone">
-					<span class="fas fa-phone-alt"></span>
-					<span class="text">Em breve</span>
-					</div>
-					<div class="email">
-					<span class="fas fa-envelope"></span>
-					<span class="text">cifrasreligiosas@gmail.com</span>
-					</div>
-				</div>
-			</div>
-			<div class="right box">
-			<h2>Nos Mande uma Mensagem</h2>
-				<div class="content">
-					<form action="#" id="musica">
-						<div class="email">
-							<div class="text" id="te">Email</div>
-							<input type="email" required class="enputz">
-						</div>
-						<div class="msg">
-							<div class="text" id="te2">Mensagem</div>
-							<textarea rows="2" cols="25" required class="enputz"></textarea>
-						</div>
-						<div class="btn">
-						<button type="submit" class="btn btn-info" id="enviar">Enviar</button>
-						</div>
-					</form>
-				</div>
-			</div>
-		</div>
-	  </div>
-	</div>
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
-	<script src="js/jquery-3.3.1.min.js"></script>
-	<script src="js/slider.js"></script>
-	<script src="js/lista.js"></script>
-	<script src="js/sistema_de_busca.js"></script>
-  <!-- Include all compiled plugins (below), or include individual files as needed -->
-	<script src="js/popper.min.js"></script> 
-  <script src="js/bootstrap-4.3.1.js"></script> 
-   </body>
 </html>
