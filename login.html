@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Faça Seu Cadastro - Cifras Religiosas - suas cifras estão aqui!</title>
+    <title>Faça Login - Cifras Religiosas - suas cifras estão aqui!</title>
     <link href="css/login.css" rel="stylesheet">
     <link rel="icon" type="image/png" href="img/Logo.png">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
@@ -12,17 +12,13 @@
     <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
 </head>
 <body>
-    <h3>Faça Cadastro no </h3> 
+    <h3>Faça login no </h3> 
     <a href="estrutura.php"><h2>Cifras Religiosas</h2></a>
 
     <div class="caixacadastro">
 
         <img src="img/logop.png">
-        <form method="post" action="inserir.php">
-        <div class="input">
-            <span class="fa fa-user-circle"></span>
-            <input type="text" name="nome" placeholder="Nome Completo" required="required">
-        </div>
+        <form method="post" action="crud.php">
         <div class="input">
             <span class="fa fa-envelope"></span>
             <input type="text" name="email" placeholder="Email" id="email" onkeyup="Email();" required="required" >
@@ -32,20 +28,17 @@
             <span class="fa fa-unlock-alt"></span>
             <input type="password" name="senha" placeholder="Senha" required="required" id="senha">
         </div>
-        <div class="input">
-            <span class="fa fa-lock" onclick="Ver();"></span>
-            <input type="password" name="senha2" placeholder="Confirmar Senha" onkeyup="Senha();" required="required" id="senha2">
-        </div>
 
         <br>
 
         <div class="botoes">
-            <input type="submit" value="Cadastrar">
-            <input type="reset" value="Limpar">
+            <a href="#">Esqueci minha Senha</a>
+            <input type="submit" value="Entrar">
+
         </div>
         </form>
 
-        <a href="login.html">Já tenho conta</a>
+        <a href="cadastrar.html">Cadastre-se Já</a>
         <a href="estrutura.php">Ir para Página Inicial</a>
     </div>
 </body>

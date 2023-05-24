@@ -21,36 +21,7 @@
 
 <body>
 
-    <div class="divnavbar">
-        <div class="divlogin">
-            <a href="#">Fazer Login</a>
-            <a href="cadastrar.html">Fazer Cadastro</a>
-        </div>
-        <div class="navbar">
-            <div class="navesq">
-            
-                <img src="img/logonav.png" class="logo1">
-           <div class="pesquisanav" id="busca"> 
-            <input type="text" placeholder="Qual a música procurada?"  id="inputpesquisa">
-            <div id="html"></div>
-        </div> 
-            <div class="menu">
-                <a href="#divmusicasac2">Mais Acessadas</a>
-                <a href="#">Músicas</a>
-                <a href="#divfooter">Sobre Nós</a>
-            </div>
-            <div class="navicones">
-            <span class="fa fa-bars" onclick="Menu();"></span>
-            <img src="img/logonav.png">
-            <span class="fa fa-user-circle "></span>
-        </div>
-        </div>
-            
-           <div class="conta"><span class="fa fa-user-circle "></span></div> 
-        </div>
-    </div>
-
-    
+<?php include ("navbar.html") ?>
 
 
     <div class="divslider">
@@ -216,92 +187,9 @@
 
     <div class="divanuncio2"></div>
 
-    <div class="divabecedario">
-        <a href="letras/A.html" id="A1"><button type="submit" class="btn btn-dark">A</button></a>
-        <a href="letras/B.html"><button type="button" class="btn btn-dark">B</button></a>
-        <a href="letras/C.html"><button type="button" class="btn btn-dark">C</button></a>
-        <a href="letras/D.html"><button type="button" class="btn btn-dark">D</button></a>
-        <a href="letras/E.html"><button type="button" class="btn btn-dark">E</button></a>
-        <a href="letras/F.html"><button type="button" class="btn btn-dark">F</button></a>
-        <a href="letras/G.html"><button type="button" class="btn btn-dark">G</button></a>
-        <a href="letras/H.html"><button type="button" class="btn btn-dark">H</button></a>
-        <a href="letras/I.html"><button type="button" class="btn btn-dark">I</button></a>
-        <a href="letras/J.html"><button type="button" class="btn btn-dark">J</button></a>
-        <a href="letras/K.html"><button type="button" class="btn btn-dark">K</button></a>
-        <a href="letras/L.html"><button type="button" class="btn btn-dark">L</button></a>
-        <a href="letras/M.html"><button type="button" class="btn btn-dark">M</button></a>
-        <a href="letras/N.html"><button type="button" class="btn btn-dark">N</button></a>
-        <a href="letras/O.html"><button type="button" class="btn btn-dark">O</button></a>
-        <a href="letras/P.html"><button type="button" class="btn btn-dark">P</button></a>
-        <a href="letras/Q.html"><button type="button" class="btn btn-dark">Q</button></a>
-        <a href="letras/R.html"><button type="button" class="btn btn-dark">R</button></a>
-        <a href="letras/S.html"><button type="button" class="btn btn-dark">S</button></a>
-        <a href="letras/T.html"><button type="button" class="btn btn-dark">T</button></a>
-        <a href="letras/U.html"><button type="button" class="btn btn-dark">U</button></a>
-        <a href="letras/V.html"><button type="button" class="btn btn-dark">V</button></a>
-        <a href="letras/W.html"><button type="button" class="btn btn-dark">W</button></a>
-        <a href="letras/X.html"><button type="button" class="btn btn-dark">X</button></a>
-        <a href="letras/Y.html"><button type="button" class="btn btn-dark">Y</button></a>
-        <a href="letras/Z.html" id="Z1"><button type="button" class="btn btn-dark">Z</button></a>
-    </div>
+        <?php include ("footer.html") ?>
 
-    <div class="divfooter" id="divfooter">
-        <div class="main-content">
-            <div class="left box">
-                <h2>Sobre Nós</h2>
-                <div class="content">
-                    <p class="texto">Este Site foi Criado em 2020, com o intuíto de ajudar as pessoas que precisam ter
-                        cifras para missas e cultos, esperamos ter te ajudado, se sim, por favor volte aqui 😉.</p>
-                    <div class="social">
-                        <a href="https://www.facebook.com/cifrasreligioosas" target="_blank"><span
-                                class="fab fa-facebook-f"></span></a>
-                        <a href="https://www.instagram.com/cifrasreligiosas/" target="_blank"><span
-                                class="fab fa-instagram"></span></a>
-                        <a href="https://twitter.com/Cifreligiosas" target="_blank"><span
-                                class="fab fa-twitter"></span></a>
-                    </div>
-                </div>
-            </div>
-            <div class="center box">
-                <h2>&nbsp;Contato</h2>
-                <div class="content">
-                    <div class="place">
-                        <span class="fas fa-map-marker-alt"></span>
-                        <span class="text">Joinville, Santa Catarina</span>
-                    </div>
-                    <div class="phone">
-                        <span class="fas fa-phone-alt"></span>
-                        <span class="text">Em breve</span>
-                    </div>
-                    <div class="email">
-                        <span class="fas fa-envelope"></span>
-                        <span class="text">cifrasreligiosas@gmail.com</span>
-                    </div>
-                </div>
-            </div>
-            <div class="right box">
-                <h2>Nos Mande uma Mensagem</h2>
-                <div class="content">
-                    <form action="https://api.staticforms.xyz/submit" method="post" id="musica">
-                        
-                        <div class="email">
-                            <div class="text" id="te">Email</div>
-                            <input type="email" required class="enputz" name="email">
-                        </div>
-                        <div class="msg">
-                            <div class="text" id="te2" >Mensagem</div>
-                            <textarea rows="2" cols="25" required class="enputz" name="message"></textarea>
-                        </div>
-                        <div class="btn">
-                            <input type="submit" class="btn btn-info" id="enviar" value="Enviar" onclick="obrigado();">     
-                        </div>
-                        <input type="hidden" name="accessKey" value="36802d78-3bac-462f-b3f4-42f1fb7387fa">
-                    </form>
-                </div>
-            </div>
-        </div>
-        <br>
-    </div>
+    
 
 </div>
 
@@ -318,6 +206,7 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap-4.3.1.js"></script>
+    
 </body>
 
 </html>
